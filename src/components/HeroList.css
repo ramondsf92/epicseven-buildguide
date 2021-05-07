@@ -1,0 +1,8 @@
+* {
+    color: whitesmoke;
+}
+
+.hero-list {
+    display: flex;
+    flex-direction: row;
+}

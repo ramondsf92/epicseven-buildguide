@@ -1,0 +1,33 @@
+.header {
+    background-color: brown;
+    color: aliceblue;
+}
+
+.header-title {
+    width: 100%;
+
+}
+
+/* .header-title h1 {
+    text-align: 
+} */
+
+.header-options {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    height: 40px;
+
+}
+
+.header-options h2 {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 5px;
+}
+
+.header-options h2:hover {
+    color: yellow;
+    cursor: pointer;
+}

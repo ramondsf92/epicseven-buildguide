@@ -1,0 +1,16 @@
+.hero-icon {
+    display: inline;
+    width: 50px;
+}
+
+.hero-star {
+    width: 15px;
+}
+
+.element-icon {
+    position: relative;
+}
+
+.hero-frame {
+    border: solid 2px yellow;
+}
