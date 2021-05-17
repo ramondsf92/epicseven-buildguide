@@ -1,64 +1,253 @@
-export const heroes = [{
+export const heroes = [
+  {
     id: 1,
     name: "Alencia",
-    img: "assets/alencia-icon.png",
     rarity: 5,
     element: "earth",
-    role: "Warrior"
-},{
+    role: "Warrior",
+    getIcon() {
+      return `assets/${this.name.replaceAll(" ", "-")}-icon.png`;
+    },
+  },
+  {
     id: 2,
     name: "Tywin Ambicioso",
-    img: "assets/atywin-icon.png",
     rarity: 5,
     element: "light",
-    role: "Knight"
-},{
+    role: "Knight",
+    getIcon() {
+      return `assets/${this.name.replaceAll(" ", "-")}-icon.png`;
+    },
+  },
+  {
     id: 3,
     name: "Ravi Apocalíptica",
-    img: "assets/aravi-icon.png",
     rarity: 5,
     element: "dark",
-    role: "Warrior"
-},{
+    role: "Warrior",
+  },
+  {
     id: 4,
     name: "Araminta",
-    img: "https://epic7x.com/wp-content/uploads/2019/01/Aramintha-icon.png",
     rarity: 5,
     element: "fire",
-    role: "Mage"
-},{
+    role: "Mage",
+  },
+  {
     id: 5,
     name: "Árbitro Vildred",
-    img: "https://epic7x.com/wp-content/uploads/2019/01/Arbiter-Vildred-icon-1.png",
     rarity: 5,
     element: "dark",
-    role: "Thief"
-},{
+    role: "Thief",
+  },
+  {
     id: 6,
     name: "Sombra do Arquidemônio",
-    img: "https://epic7x.com/wp-content/uploads/2021/01/Archdemon-Shadow-icon.png",
     rarity: 5,
     element: "dark",
-    role: "Mage"
-},{
+    role: "Mage",
+  },
+  {
     id: 7,
     name: "Baal e Sezan",
-    img: "https://epic7x.com/wp-content/uploads/2019/04/Baal-icon.png",
     rarity: 5,
     element: "fire",
-    role: "Mage"
-},{
+    role: "Mage",
+  },
+  {
     id: 8,
     name: "Baiken",
-    img: "https://epic7x.com/wp-content/uploads/2019/04/Baiken-Icon.png",
     rarity: 5,
     element: "earth",
-    role: "Thief"
-},{
+    role: "Thief",
+  },
+  {
     id: 9,
     name: "Bassar",
-    img: "https://epic7x.com/wp-content/uploads/2019/04/Basar-icon.png",
     rarity: 5,
     element: "earth",
-    role: "Mage"
-},]
+    role: "Mage",
+  },
+  {
+    id: 10,
+    name: "Bellona",
+    rarity: 5,
+    element: "earth",
+    role: "Ranger",
+  },
+  {
+    id: 11,
+    name: "Presto da Lua Sangrenta",
+    rarity: 5,
+    element: "dark",
+    role: "Soul Weaver",
+  },
+  {
+    id: 12,
+    name: "Modelo Bombardeio Kanna",
+    rarity: 5,
+    element: "fire",
+    role: "Ranger",
+  },
+  {
+    id: 13,
+    name: "Bruxa do Espinheiro Iséria",
+    rarity: 5,
+    element: "dark",
+    role: "Ranger",
+  },
+  {
+    id: 14,
+    name: "Cecília",
+    rarity: 5,
+    element: "fire",
+    role: "Knight",
+  },
+  {
+    id: 15,
+    name: "Celine",
+    rarity: 5,
+    element: "earth",
+    role: "Thief",
+  },
+  {
+    id: 16,
+    name: "Cerise",
+    rarity: 5,
+    element: "ice",
+    role: "Ranger",
+  },
+  {
+    id: 17,
+    name: "Cérmia",
+    rarity: 5,
+    element: "fire",
+    role: "Warrior",
+  },
+  {
+    id: 18,
+    name: "Charles",
+    rarity: 5,
+    element: "earth",
+    role: "Knight",
+  },
+  {
+    id: 19,
+    name: "Charlotte",
+    rarity: 5,
+    element: "fire",
+    role: "Warrior",
+  },
+  {
+    id: 20,
+    name: "Chloe",
+    rarity: 5,
+    element: "ice",
+    role: "Warrior",
+  },
+  {
+    id: 21,
+    name: "Choux",
+    rarity: 5,
+    element: "ice",
+    role: "Warrior",
+  },
+  {
+    id: 22,
+    name: "Corvus das Trevas",
+    rarity: 5,
+    element: "dark",
+    role: "Warrior",
+  },
+  {
+    id: 23,
+    name: "Jóia do Deserto Bassar",
+    rarity: 5,
+    element: "light",
+    role: "Soul Weaver",
+  },
+  {
+    id: 24,
+    name: "Lilibete Estilista",
+    rarity: 5,
+    element: "dark",
+    role: "Warrior",
+  },
+  {
+    id: 25,
+    name: "Destina",
+    rarity: 5,
+    element: "earth",
+    role: "Soul Weaver",
+  },
+  {
+    id: 26,
+    name: "Diene",
+    rarity: 5,
+    element: "ice",
+    role: "Soul Weaver",
+  },
+  {
+    id: 27,
+    name: "Dizzy",
+    rarity: 5,
+    element: "ice",
+    role: "Mage",
+  },
+  {
+    id: 28,
+    name: "Eda",
+    rarity: 5,
+    element: "ice",
+    role: "Mage",
+  },
+  {
+    id: 29,
+    name: "Elena",
+    rarity: 5,
+    element: "ice",
+    role: "Soul Weaver",
+  },
+  {
+    id: 30,
+    name: "Elphelt",
+    rarity: 5,
+    element: "fire",
+    role: "Ranger",
+  },
+  {
+    id: 31,
+    name: "Ervalen",
+    rarity: 5,
+    element: "earth",
+    role: "Thief",
+  },
+  {
+    id: 32,
+    name: "Tenébria das Fábulas",
+    rarity: 5,
+    element: "ice",
+    role: "Mage",
+  },
+  {
+    id: 33,
+    name: "Lidica Infiel",
+    rarity: 5,
+    element: "light",
+    role: "Ranger",
+  },
+  {
+    id: 34,
+    name: "Cecília Caída",
+    rarity: 5,
+    element: "dark",
+    role: "Knight",
+  },
+  {
+    id: 35,
+    name: "Flan",
+    rarity: 5,
+    element: "ice",
+    role: "Ranger",
+  },
+];

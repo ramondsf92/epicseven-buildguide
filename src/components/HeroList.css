@@ -1,8 +1,10 @@
 .hero-list {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
 
-
+  margin: 40px 100px;
+  border: solid 2px brown;
+  border-radius: 2%;
 }
