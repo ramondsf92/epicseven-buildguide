@@ -4,6 +4,7 @@ import { heroes } from "./heroes";
 
 import Header from "./components/Header";
 import HeroList from "./components/HeroList";
+import HeroDetails from "./components/HeroDetails";
 
 export default class App extends Component {
   constructor(props) {
@@ -14,19 +15,29 @@ export default class App extends Component {
       searchBarName: "",
       showingArtifacts: false,
       showingHunts: false,
+      showingDetails: false,
+      heroDetailing: null,
     };
 
     this.showHeroList = this.showHeroList.bind(this);
     this.listHeroes = this.listHeroes.bind(this);
     this.showArtifactList = this.showArtifactList.bind(this);
     this.listArtifacts = this.listArtifacts.bind(this);
+    this.listHeroDetails = this.listHeroDetails.bind(this);
+    this.showDetails = this.showDetails.bind(this);
+    this.backToHeroes = this.backToHeroes.bind(this);
   }
 
   showHeroList() {
     if (this.state.showingHeroes) {
       this.setState({ showingHeroes: false });
     } else {
-      this.setState({ showingHeroes: true, showingArtifacts: false });
+      this.setState({
+        showingHeroes: true,
+        showingArtifacts: false,
+        showingDetails: false,
+        heroDetailing: null,
+      });
     }
   }
 
@@ -38,7 +49,9 @@ export default class App extends Component {
     });
 
     if (this.state.showingHeroes) {
-      return <HeroList heroes={filteredHeroes} />;
+      return (
+        <HeroList heroes={filteredHeroes} showDetails={this.showDetails} />
+      );
     } else return;
   }
 
@@ -74,6 +87,29 @@ export default class App extends Component {
     );
   }
 
+  showDetails(hero) {
+    this.setState({
+      showingHeroes: false,
+      showingDetails: true,
+      heroDetailing: hero,
+    });
+  }
+
+  listHeroDetails() {
+    if (this.state.showingDetails)
+      return (
+        <HeroDetails
+          hero={this.state.heroDetailing}
+          showHeroes={this.showHeroList}
+        />
+      );
+    else return;
+  }
+
+  backToHeroes() {}
+
+  show;
+
   render() {
     return (
       <div className="App">
@@ -82,15 +118,18 @@ export default class App extends Component {
           showHeroes={this.showHeroList}
           showArtifacts={this.showArtifactList}
         />
-        <input type="text" onChange={(e) => this.changeSearchName(e)} />
-        <input
-          className="button-search"
-          type="button"
-          onClick={() => this.searchHero()}
-          value="Search"
-        />
+        <div className="search-form">
+          <input type="text" onChange={(e) => this.changeSearchName(e)} />
+          <input
+            className="button-search"
+            type="button"
+            onClick={() => this.searchHero()}
+            value="Search"
+          />
+        </div>
         {this.listHeroes()}
         {this.listArtifacts()}
+        {this.listHeroDetails()}
       </div>
     );
   }

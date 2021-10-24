@@ -15,7 +15,7 @@ export default class Header extends React.Component {
         <div className="header-options">
           <h2 onClick={() => this.props.showHeroes()}>Heroes</h2>
           <h2 onClick={() => this.props.showArtifacts()}>Artifacts</h2>
-          <h2>Hunts</h2>
+          <h2 onClick={() => this.props.showArtifacts()}>Hunts</h2>
         </div>
       </div>
     );

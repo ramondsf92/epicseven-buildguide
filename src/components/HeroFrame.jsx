@@ -23,7 +23,7 @@ export default class HeroFrame extends React.Component {
     return (
       <div
         className="hero-frame"
-        onClick={() => this.alertName(this.props.hero)}
+        onClick={() => this.props.showDetails(this.props.hero)}
       >
         <img
           className="element-icon"
